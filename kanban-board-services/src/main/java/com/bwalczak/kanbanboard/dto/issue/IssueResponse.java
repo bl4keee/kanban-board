@@ -1,4 +1,4 @@
-package com.bwalczak.kanbanboard.dto;
+package com.bwalczak.kanbanboard.dto.issue;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.bwalczak.kanbanboard.dto;
+package com.bwalczak.kanbanboard.dto.issue;
 
 import com.bwalczak.kanbanboard.entities.task.Task;
 import com.bwalczak.kanbanboard.entities.task.TaskAssignee;
