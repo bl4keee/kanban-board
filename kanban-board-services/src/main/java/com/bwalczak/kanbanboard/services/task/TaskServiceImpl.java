@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -17,5 +18,10 @@ public class TaskServiceImpl implements TaskService {
     @Override
     public List<Task> getAllTasks() {
         return new ArrayList<>(taskRepository.findAll());
+    }
+
+    @Override
+    public Optional<Task> getTaskById(Long id) {
+        return taskRepository.findById(id);
     }
 }
