@@ -1,5 +1,6 @@
 package com.bwalczak.kanbanboard.entities.task;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import java.util.Date;
 import java.util.HashSet;
@@ -39,10 +40,12 @@ public class Task {
     private String description;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "owner_id", nullable = false)
     private TaskOwner owner;
 
     @ManyToOne
+    @JsonBackReference
     @JoinColumn(name = "category_id", nullable = false)
     private TaskCategory category;
 
