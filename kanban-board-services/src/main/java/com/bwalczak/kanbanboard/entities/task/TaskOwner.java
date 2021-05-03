@@ -1,6 +1,7 @@
 package com.bwalczak.kanbanboard.entities.task;
 
 import com.bwalczak.kanbanboard.entities.common.Person;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import java.util.Set;
 @Table(name = "task_owners")
 public class TaskOwner extends Person {
 
+    @JsonManagedReference
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Task> tasks = new HashSet<>();
 
