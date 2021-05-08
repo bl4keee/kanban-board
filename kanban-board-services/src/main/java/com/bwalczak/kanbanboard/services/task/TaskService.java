@@ -10,4 +10,6 @@ public interface TaskService {
     List<Task> getAllTasks();
 
     Optional<Task> getTaskById(Long id);
+
+    Optional<Task> getTaskByTitle(String title);
 }
