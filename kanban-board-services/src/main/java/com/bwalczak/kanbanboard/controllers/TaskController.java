@@ -19,9 +19,14 @@ public class TaskController {
         return taskService.getAllTasks();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id}")
     public Task getTaskById(@PathVariable Long id) {
         return taskService.getTaskById(id).orElseThrow(() -> new RuntimeException("No task was found with id: " + id));
+    }
+
+    @GetMapping("/title/{title}")
+    public Task getTaskByTitle(@PathVariable String title) {
+        return taskService.getTaskByTitle(title).orElseThrow(() -> new RuntimeException("No task was found with title: " + title));
     }
 
 }
